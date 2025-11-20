@@ -1,10 +1,20 @@
+select name,age 
+from person 
+where address = 'Kazan';
 
+select name,age 
+from person 
+where address = 'Kazan' and gender = 'female';
 
+select name,rating 
+from pizzeria 
+where  rating <= 5 and rating >= 3.5
+order by rating;
 
-
-
-
-
+select name,rating
+FROM pizzeria
+WHERE rating BETWEEN 3.5 AND 5
+order by rating;
 
 SELECT person_id
 FROM person_order
@@ -51,7 +61,11 @@ WHERE NOT EXISTS (
 SELECT p.name AS person_name, m.pizza_name AS pizza_name, pz.name AS pizzeria_name
 FROM person_order po
 JOIN person p ON po.person_id = p.id
-JOIN menu m ON po.menu_id = m.id
-JOIN pizzeria pz ON m.pizzeria_id = pz.id
-ORDER BY  person_name ASC,  pizza_name ASC, 
-pizzeria_name ASC;
+JOIN 
+menu m ON po.menu_id = m.id
+JOIN 
+    pizzeria pz ON m.pizzeria_id = pz.id
+ORDER BY 
+    person_name ASC, 
+    pizza_name ASC, 
+    pizzeria_name ASC;
