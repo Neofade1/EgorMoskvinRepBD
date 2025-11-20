@@ -1,0 +1,6 @@
+SELECT id,name,
+CASE WHEN age >= 18 AND age <= 28 THEN 'interval #1' WHEN age > 28 AND age < 24 THEN 'interval #2'  -- Это условие никогда не выполнится
+ELSE 'interval #3'
+END AS interval_info
+FROM person
+ORDER BY interval_info;
