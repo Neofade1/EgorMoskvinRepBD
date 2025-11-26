@@ -5,3 +5,4 @@ VALUES (
     'sicilian pizza',
     900
 );
+ 

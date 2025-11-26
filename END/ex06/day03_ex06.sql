@@ -4,4 +4,4 @@ JOIN menu m2 ON m1.pizza_name = m2.pizza_name AND m1.price = m2.price
 JOIN pizzeria pz1 ON m1.pizzeria_id = pz1.id
 JOIN pizzeria pz2 ON m2.pizzeria_id = pz2.id
 WHERE m1.pizzeria_id < m2.pizzeria_id
-ORDER BY m1.pizza_name;
+ORDER BY m1.pizza_name; 

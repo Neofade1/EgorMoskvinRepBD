@@ -10,4 +10,4 @@ WHERE p.name = 'Andrey'
     WHERE po.person_id = p.id 
       AND m.pizzeria_id = pz.id
   )
-ORDER BY pizzeria_name;
+ORDER BY pizzeria_name; 

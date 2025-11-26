@@ -4,4 +4,4 @@ JOIN person p ON pv.person_id = p.id
 JOIN pizzeria pz ON pv.pizzeria_id = pz.id
 GROUP BY pz.name
 HAVING COUNT(*) FILTER (WHERE p.gender = 'male') != COUNT(*) FILTER (WHERE p.gender = 'female')
-ORDER BY pizzeria_name;
+ORDER BY pizzeria_name; 

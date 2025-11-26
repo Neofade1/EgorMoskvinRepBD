@@ -3,4 +3,4 @@ SELECT days.missing_date
 FROM days
 LEFT JOIN visited_dates ON days.missing_date = visited_dates.visit_date
 WHERE visited_dates.visit_date IS NULL
-ORDER BY days.missing_date;
+ORDER BY days.missing_date; 

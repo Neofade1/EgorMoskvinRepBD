@@ -13,7 +13,7 @@ male_orders AS (
     WHERE p.gender = 'male'
 ),
 female_only AS (
-    SELECT pizzeria_id
+    SELECT pizzeria_id 
     FROM female_orders
     EXCEPT
     SELECT pizzeria_id
