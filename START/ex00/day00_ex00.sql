@@ -1,3 +1,3 @@
 select name,age 
-from person 
+from person  
 where address = 'Kazan';
