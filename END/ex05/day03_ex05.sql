@@ -2,7 +2,7 @@ select distinct pz.name as pizzeria_name
 from person_visits pv
 join person p on pv.person_id = p.id
 join pizzeria pz on pv.pizzeria_id = pz.id
-where p.name = 'andrey'
+where p.name = 'Andrey'
   and not exists (
     select 1 
     from person_order po
