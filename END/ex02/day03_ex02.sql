@@ -1,5 +1,5 @@
-SELECT  m.pizza_name, m.price, pz.name AS pizzeria_name
-FROM menu m
-JOIN pizzeria pz ON m.pizzeria_id = pz.id
-WHERE m.id NOT IN (SELECT menu_id FROM person_order)
-ORDER BY m.pizza_name, m.price; 
+select  m.pizza_name, m.price, pz.name as pizzeria_name
+from menu m
+join pizzeria pz on m.pizzeria_id = pz.id
+where m.id not in (select menu_id from person_order)
+order by m.pizza_name, m.price; 

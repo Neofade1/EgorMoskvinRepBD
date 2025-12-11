@@ -1,4 +1,4 @@
-SELECT id AS menu_id
-FROM menu
-WHERE id NOT IN (SELECT menu_id FROM person_order)
-ORDER BY menu_id; 
+select id as menu_id
+from menu
+where id not in (select menu_id from person_order)
+order by menu_id; 

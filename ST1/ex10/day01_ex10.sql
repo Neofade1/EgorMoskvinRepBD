@@ -1,7 +1,7 @@
-SELECT p.name AS person_name, m.pizza_name AS pizza_name, pz.name AS pizzeria_name
-FROM person_order po
-JOIN person p ON po.person_id = p.id
-JOIN menu m ON po.menu_id = m.id
-JOIN pizzeria pz ON m.pizzeria_id = pz.id
-ORDER BY  person_name ASC,  pizza_name ASC, 
-pizzeria_name ASC; 
+select p.name as person_name, m.pizza_name as pizza_name, pz.name as pizzeria_name
+from person_order po
+join person p on po.person_id = p.id
+join menu m on po.menu_id = m.id
+join pizzeria pz on m.pizzeria_id = pz.id
+order by  person_name asc,  pizza_name asc, 
+pizzeria_name asc; 

@@ -1,6 +1,6 @@
-SELECT pizza_name
-FROM menu
-UNION
-SELECT pizza_name
-FROM menu
-ORDER BY pizza_name DESC; 
+select pizza_name
+from menu
+union
+select pizza_name
+from menu
+order by pizza_name desc; 

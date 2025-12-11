@@ -1,6 +1,6 @@
-SELECT id,name,
-CASE WHEN age >= 18 AND age <= 28 THEN 'interval #1' WHEN age > 28 AND age < 24 THEN 'interval #2'  
-ELSE 'interval #3'
-END AS interval_info
-FROM person
-ORDER BY interval_info;    
+select id,name,
+case when age >= 18 and age <= 28 then 'interval #1' when age > 28 and age < 24 then 'interval #2'  
+else 'interval #3'
+end as interval_info
+from person
+order by interval_info;    

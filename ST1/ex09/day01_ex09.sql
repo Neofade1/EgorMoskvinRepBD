@@ -1,13 +1,13 @@
--- 1 Вариант с IN
-SELECT name
-FROM pizzeria
-WHERE id NOT IN (SELECT pizzeria_id FROM person_visits);
+-- 1 вариант с IN
+select name
+from pizzeria
+where id not in (select pizzeria_id from person_visits);
 
--- 2 Вариант с EXISTS
-SELECT name
-FROM pizzeria
-WHERE NOT EXISTS (
-    SELECT 1 
-    FROM person_visits 
-    WHERE person_visits.pizzeria_id = pizzeria.id
+-- 2 вариант с EXISTS
+select name
+from pizzeria
+where not exists (
+    select 1 
+    from person_visits 
+    where person_visits.pizzeria_id = pizzeria.id
 );  

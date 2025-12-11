@@ -1,3 +1,3 @@
-SELECT name || ' (age:' || age || ', gender:''' || gender || ''', address:''' || address || ''')' AS person_information
-FROM person
-ORDER BY person_information;  
+select name || ' (age:' || age || ', gender:''' || gender || ''', address:''' || address || ''')' as person_information
+from person
+order by person_information;  

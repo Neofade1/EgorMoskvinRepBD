@@ -1,5 +1,5 @@
-SELECT  m.pizza_name, pz.name AS pizzeria_name,  m.price
-FROM menu m
-JOIN pizzeria pz ON m.pizzeria_id = pz.id
-WHERE m.pizza_name IN ('mushroom pizza', 'pepperoni pizza')
-ORDER BY m.pizza_name, pz.name; 
+select  m.pizza_name, pz.name as pizzeria_name,  m.price
+from menu m
+join pizzeria pz on m.pizzeria_id = pz.id
+where m.pizza_name in ('mushroom pizza', 'pepperoni pizza')
+order by m.pizza_name, pz.name; 

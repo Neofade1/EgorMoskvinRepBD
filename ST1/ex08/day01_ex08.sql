@@ -1,4 +1,4 @@
-SELECT order_date,name || ' (age:' || age || ')' AS person_information
-FROM person_order
-NATURAL JOIN (SELECT id AS person_id, name, age FROM person) AS p
-ORDER BY order_date, person_information; 
+select order_date,name || ' (age:' || age || ')' as person_information
+from person_order
+natural join (select id as person_id, name, age from person) as p
+order by order_date, person_information; 

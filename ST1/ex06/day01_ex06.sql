@@ -1,3 +1,3 @@
-SELECT action_date,(SELECT name FROM person WHERE id = t.person_id) AS person_name
-FROM (SELECT order_date AS action_date, person_id FROM person_order INTERSECT SELECT visit_date, person_id  FROM person_visits) AS t
-ORDER BY action_date, person_name DESC; 
+select action_date,(select name from person where id = t.person_id) as person_name
+from (select order_date as action_date, person_id from person_order intersect select visit_date, person_id  from person_visits) as t
+order by action_date, person_name desc; 

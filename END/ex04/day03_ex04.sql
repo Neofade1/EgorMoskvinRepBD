@@ -1,36 +1,36 @@
-WITH female_orders AS (
-    SELECT DISTINCT m.pizzeria_id
-    FROM person_order po
-    JOIN person p ON po.person_id = p.id
-    JOIN menu m ON po.menu_id = m.id
-    WHERE p.gender = 'female'
+with female_orders as (
+    select distinct m.pizzeria_id
+    from person_order po
+    join person p on po.person_id = p.id
+    join menu m on po.menu_id = m.id
+    where p.gender = 'female'
 ),
-male_orders AS (
-    SELECT DISTINCT m.pizzeria_id
-    FROM person_order po
-    JOIN person p ON po.person_id = p.id
-    JOIN menu m ON po.menu_id = m.id
-    WHERE p.gender = 'male'
+male_orders as (
+    select distinct m.pizzeria_id
+    from person_order po
+    join person p on po.person_id = p.id
+    join menu m on po.menu_id = m.id
+    where p.gender = 'male'
 ),
-female_only AS (
-    SELECT pizzeria_id 
-    FROM female_orders
-    EXCEPT
-    SELECT pizzeria_id
-    FROM male_orders
+female_only as (
+    select pizzeria_id 
+    from female_orders
+    except
+    select pizzeria_id
+    from male_orders
 ),
-male_only AS (
-    SELECT pizzeria_id
-    FROM male_orders
-    EXCEPT
-    SELECT pizzeria_id
-    FROM female_orders
+male_only as (
+    select pizzeria_id
+    from male_orders
+    except
+    select pizzeria_id
+    from female_orders
 )
-SELECT pz.name AS pizzeria_name
-FROM female_only
-JOIN pizzeria pz ON female_only.pizzeria_id = pz.id
-UNION
-SELECT pz.name AS pizzeria_name
-FROM male_only
-JOIN pizzeria pz ON male_only.pizzeria_id = pz.id
-ORDER BY pizzeria_name;
+select pz.name as pizzeria_name
+from female_only
+join pizzeria pz on female_only.pizzeria_id = pz.id
+union
+select pz.name as pizzeria_name
+from male_only
+join pizzeria pz on male_only.pizzeria_id = pz.id
+order by pizzeria_name;

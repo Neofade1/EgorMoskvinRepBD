@@ -1,7 +1,7 @@
-SELECT pz.name AS pizzeria_name
-FROM person_visits pv
-JOIN person p ON pv.person_id = p.id
-JOIN pizzeria pz ON pv.pizzeria_id = pz.id
-GROUP BY pz.name
-HAVING COUNT(*) FILTER (WHERE p.gender = 'male') != COUNT(*) FILTER (WHERE p.gender = 'female')
-ORDER BY pizzeria_name; 
+select pz.name as pizzeria_name
+from person_visits pv
+join person p on pv.person_id = p.id
+join pizzeria pz on pv.pizzeria_id = pz.id
+group by pz.name
+having count(*) filter (where p.gender = 'male') != count(*) filter (where p.gender = 'female')
+order by pizzeria_name; 

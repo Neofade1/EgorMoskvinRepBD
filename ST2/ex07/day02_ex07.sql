@@ -1,8 +1,8 @@
-SELECT DISTINCT pz.name
-FROM person_visits pv
-JOIN person p ON pv.person_id = p.id
-JOIN pizzeria pz ON pv.pizzeria_id = pz.id
-JOIN menu m ON m.pizzeria_id = pz.id
-WHERE p.name = 'Dmitriy' 
-  AND pv.visit_date = '2022-01-08'
-  AND m.price < 800; 
+select distinct pz.name
+from person_visits pv
+join person p on pv.person_id = p.id
+join pizzeria pz on pv.pizzeria_id = pz.id
+join menu m on m.pizzeria_id = pz.id
+where p.name = 'dmitriy' 
+  and pv.visit_date = '2022-01-08'
+  and m.price < 800; 

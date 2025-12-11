@@ -1,6 +1,6 @@
-SELECT name AS object_name
-FROM person
-UNION ALL
-SELECT pizza_name AS object_name
-FROM menu
-ORDER BY object_name; 
+select name as object_name
+from person
+union all
+select pizza_name as object_name
+from menu
+order by object_name; 

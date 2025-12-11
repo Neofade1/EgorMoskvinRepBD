@@ -1,6 +1,6 @@
-SELECT DISTINCT p.name
-FROM person p
-JOIN person_order po ON p.id = po.person_id
-JOIN menu m ON po.menu_id = m.id
-WHERE p.gender = 'male'AND p.address IN ('Moscow', 'Samara')AND m.pizza_name IN ('pepperoni pizza', 'mushroom pizza')
-ORDER BY p.name DESC; 
+select distinct p.name
+from person p
+join person_order po on p.id = po.person_id
+join menu m on po.menu_id = m.id
+where p.gender = 'male'and p.address in ('moscow', 'samara')and m.pizza_name in ('pepperoni pizza', 'mushroom pizza')
+order by p.name desc; 

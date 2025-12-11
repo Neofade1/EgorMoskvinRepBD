@@ -1,3 +1,3 @@
-INSERT INTO person_visits (id, person_id, pizzeria_id, visit_date)
-VALUES ((SELECT MAX(id) FROM person_visits) + 1,(SELECT id FROM person WHERE name = 'Denis'),(SELECT id FROM pizzeria WHERE name = 'Dominos'),'2022-02-24'),
-((SELECT MAX(id) FROM person_visits) + 2,(SELECT id FROM person WHERE name = 'Irina'),(SELECT id FROM pizzeria WHERE name = 'Dominos'),'2022-02-24'); 
+insert into person_visits (id, person_id, pizzeria_id, visit_date)
+values ((select max(id) from person_visits) + 1,(select id from person where name = 'denis'),(select id from pizzeria where name = 'dominos'),'2022-02-24'),
+((select max(id) from person_visits) + 2,(select id from person where name = 'irina'),(select id from pizzeria where name = 'dominos'),'2022-02-24'); 

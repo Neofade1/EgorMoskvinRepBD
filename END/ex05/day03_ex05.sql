@@ -1,13 +1,13 @@
-SELECT DISTINCT pz.name AS pizzeria_name
-FROM person_visits pv
-JOIN person p ON pv.person_id = p.id
-JOIN pizzeria pz ON pv.pizzeria_id = pz.id
-WHERE p.name = 'Andrey'
-  AND NOT EXISTS (
-    SELECT 1 
-    FROM person_order po
-    JOIN menu m ON po.menu_id = m.id
-    WHERE po.person_id = p.id 
-      AND m.pizzeria_id = pz.id
+select distinct pz.name as pizzeria_name
+from person_visits pv
+join person p on pv.person_id = p.id
+join pizzeria pz on pv.pizzeria_id = pz.id
+where p.name = 'andrey'
+  and not exists (
+    select 1 
+    from person_order po
+    join menu m on po.menu_id = m.id
+    where po.person_id = p.id 
+      and m.pizzeria_id = pz.id
   )
-ORDER BY pizzeria_name; 
+order by pizzeria_name; 
